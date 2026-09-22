@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Scarletta - Faça seu Pedido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>𝕸𝖆𝖋𝖎𝖆 Pizzaria Scarletta</h1>
+            <p>Monte sua pizza pela preferencias!</p>
+        </header>
+
+        <form id="pizzaForm">
+            <!-- Seção de Dados do Cliente -->
+            <fieldset>
+                <legend>1. Seus Dados</legend>
+                
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone / WhatsApp:</label>
+                    <input type="tel" id="telefone" required placeholder="(XX) XXXXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="endereco">Endereço de Entrega:</label>
+                    <textarea id="endereco" rows="3" required placeholder="Rua, Número, Bairro, Ponto de Referência"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Seção de Escolha da Pizza -->
+            <fieldset>
+                <legend>2. Monte sua Pizza</legend>
+
+                <div class="form-group">
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" required>
+                        <option value="">Selecione o tamanho</option>
+                        <option value="Pequena">Pequena (4 pedaços) - R$ 35,00</option>
+                        <option value="Média">Média (6 pedaços) - R$ 45,00</option>
+                        <option value="Grande">Grande (8 pedaços) - R$ 55,00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sabor1">Primeiro Sabor:</label>
+                    <select id="sabor1" required>
+                        <option value="">Selecione o sabor</option>
+                        <option value="Calabresa">Calabresa</option>
+                        <option value="Margherita">Margherita</option>
+                        <option value="Frango com Catupiry">Frango com Catupiry</option>
+                        <option value="Quatro Queijos">Quatro Queijos</option>
+                        <option value="Carne de sol">Carne de sol</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sabor2">Segundo Sabor (Opcional para meio a meio):</label>
+                    <select id="sabor2">
+                        <option value="">Apenas um sabor</option>
+                        <option value="Calabresa">Calabresa</option>
+                        <option value="Margherita">Margherita</option>
+                        <option value="Frango com Catupiry">Frango com Catupiry</option>
+                        <option value="Quatro Queijos">Quatro Queijos</option>
+                        <option value="Carne de sol">Carne de sol</option>
+                        <option value="Pepperoni">Pepperoni</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Borda Recheada:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="bordaCatupiry" value="Catupiry"> Catupiry (+ R$ 8,00)</label>
+                        <label><input type="checkbox" id="bordaCheddar" value="Cheddar"> Cheddar (+ R$ 8,00)</label>
+                </div>
+            </fieldset>
+
+            <!-- Seção de Adicionais e Pagamento -->
+            <fieldset>
+                <legend>3. Adicionais e Pagamento</legend>
+
+                <div class="form-group">
+                    <label for="bebida">Bebida:</label>
+                    <select id="bebida">
+                        <option value="Nenhuma">Sem bebida</option>
+                        <option value="Coca-Cola 2L">Coca-Cola 2L - R$ 12,00</option>
+                        <option value="Guaraná Antarctica 2L">Guaraná Antarctica 2L - R$ 10,00</option>
+                        <option value="Fanta Laranja 2L">Fanta Laranja 2L - R$ 10,00</option>
+                         <option value="Fanta Uva 2L">Fanta Uva 2L - R$ 10,00</option>
+                        <option value="Água Mineral 500ml">Água Mineral 500ml - R$ 4,00</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pagamento">Forma de Pagamento:</label>
+                    <select id="pagamento" required>
+                        <option value="">Selecione a forma de pagamento</option>
+                        <option value="Cartão de Crédito (Entrega)">Cartão de Crédito (na entrega)</option>
+                        <option value="Cartão de Débito (Entrega)">Cartão de Débito (na entrega)</option>
+                        <option value="PIX">PIX</option>
+                        <option value="Dinheiro">Dinheiro (Avisar troco se precisar)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="trocoGroup" style="display: none;">
+                    <label for="troco">Troco para quanto?</label>
+                    <input type="text" id="troco" placeholder="Ex: R$ 100,00">
+                </div>
+
+                <div class="form-group">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" rows="2" placeholder="Ex: Retirar cebola, campainha quebrada..."></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn-enviar">Finalizar Pedido via WhatsApp</button>
+        </form>
+    </div>
+
+    <a class="whatsapp-btn" href="https://wa.me/85996851929?text=Olá%20quero%20falar%20com%20vocês" target="_blank">
+        📱Falar no whatsapp-btn
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
